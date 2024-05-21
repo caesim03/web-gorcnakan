@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checkbox-container label {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 25px;
+}
+
+.result-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#carImages {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Create a responsive grid */
+    grid-gap: 10px; /* Add spacing between images */
+}
+
+.car-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
