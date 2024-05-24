@@ -1,137 +1,103 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+  background-color: #ecf0f1;
 }
 
-.carousel {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-ul.slides {
-  display: block;
-  position: relative;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style: none;
-}
-
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-ul.slides input {
-  display: none;
-}
-
-
-.slide-container {
-  display: block;
-}
-
-.slide-image {
-  display: block;
-  position: absolute;
+.title {
   width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-
-.slide-image img {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
+.title h1 {
+  font-family: sans-serif;
 }
-
-.carousel-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  font-size: 100px;
-  line-height: 100vh;
-  color: #fff;
+.rotating-slider-container {
+  width: 100%;
+  height: 500px;
+  margin: 100px 0 20px 0;
+  overflow: hidden;
 }
-
-.carousel-controls label {
-  display: none;
-  position: absolute;
+.rotating-slider {
+  margin: 40px auto 0 auto;
+  position: relative;
+}
+.rotating-slider ul.direction-controls {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  opacity: 0;
-  transition: opacity .2s;
-  cursor: pointer;
-}
-
-.slide-image:hover+.carousel-controls label {
-  opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-  width: 49%;
-  height: 100vh;
-  text-align: left;
-  left: 0;
-}
-
-.carousel-controls .next-slide {
-  width: 49%;
-  height: 100vh;
-  text-align: right;
-  right: 0;
-}
-
-.carousel-dots {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  z-index: 999;
-  text-align: center
+  bottom: -90px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-
-.carousel-dots .carousel-dot {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+.rotating-slider ul.direction-controls li button {
+  background: rgba(51, 122, 183, 0.8);
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  height: 60px;
+  width: 60px;
+  padding-bottom: 6px;
+  text-align: center;
+  transition: background 0.35s;
+}
+.rotating-slider ul.direction-controls li button:hover {
+  background: rgba(51, 122, 183, 1);
+}
+.rotating-slider ul.direction-controls li.left-arrow button {
+  border-radius: 100% 0 0 100%;
+}
+.rotating-slider ul.direction-controls li.right-arrow button {
+  border-radius: 0 100% 100% 0;
+}
+.rotating-slider ul.slides {
   border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.5;
-  margin: 10px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  transform-origin: center center;
+  width: 100%;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
 }
-
-input:checked+.slide-container .slide-image {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity .5s ease-in-out;
+.rotating-slider ul.slides .slide-inner {
+  position: absolute;
+  bottom: 80px;
+  right: 190px;
 }
-
-input:checked+.slide-container .carousel-controls label {
+.rotating-slider ul.slides .slide-inner div {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.rotating-slider ul.slides .slide-inner p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.rotating-slider ul.slides li {
+  background-color: #ecf0f1;
+  background-position: center;
+  background-size: cover;
   display: block;
-}
-
-input#img-1:checked~.carousel-dots label#img-dot-1,
-input#img-2:checked~.carousel-dots label#img-dot-2,
-input#img-3:checked~.carousel-dots label#img-dot-3,
-input#img-4:checked~.carousel-dots label#img-dot-4,
-input#img-5:checked~.carousel-dots label#img-dot-5 {
-  opacity: 1;
-}
-
-
-input:checked+.slide-container .nav label {
-  display: block;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: center;
+  transform-origin: bottom center;
+  width: 100%;
+  box-sizing: content-box;
 }

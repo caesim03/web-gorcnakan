@@ -1,98 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
 
-<body>
-
-    <div>
-        <div class="carousel">
-            <ul class="slides">
-                <input type="radio" name="radio-buttons" id="img-1" checked />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="images/image1.jpg">
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-5" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-2" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-2" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="images/image2.jpg">
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-1" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-3" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-3" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="images/image3.jpg">
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-2" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-4" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-4" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="images/image4.jpg">
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-3" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-5" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-5" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="images/image5.jpg">
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-4" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-1" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <div class="carousel-dots">
-                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-                    <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
-                    <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
-                </div>
-            </ul>
-        </div>
+  <body>
+    <div class="title">
+      <h1>Photos Carousel</h1>
     </div>
-</body>
+    <div class="rotating-slider-container">
+      <div class="rotating-slider">
+        <ul class="slides">
+          <li style="background-image: url(images/image1.jpg)">
+            <div class="slide-inner">
+              <div>Image 1</div>
+              <p>Image 1 description</p>
+            </div>
+          </li>
+          <li style="background-image: url(images/image2.jpg)">
+            <div class="slide-inner">
+              <div>Image 2</div>
+              <p>Image 2 description</p>
+            </div>
+          </li>
+          <li style="background-image: url(images/image3.jpg)">
+            <div class="slide-inner">
+              <div>Image 3</div>
+              <p>Image 3 description</p>
+            </div>
+          </li>
+          <li style="background-image: url(images/image4.jpg)">
+            <div class="slide-inner">
+              <div>Image 4</div>
+              <p>Image 4 description</p>
+            </div>
+          </li>
+          <li style="background-image: url(images/image5.jpg)">
+            <div class="slide-inner">
+              <div>Image 5</div>
+              <p>Image 5 description</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <script src="js/jquery.rotating-slider.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
